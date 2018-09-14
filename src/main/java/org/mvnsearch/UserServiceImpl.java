@@ -4,7 +4,7 @@ import org.apache.thrift.TException;
 import uic.UserService;
 
 /**
- * Created with IntelliJ IDEA.
+ * user service implementation
  *
  * @author linux_china
  */

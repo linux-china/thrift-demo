@@ -19,7 +19,7 @@ public class DriftAppClient {
     public static void main(String[] args) {
         DriftClientFactory driftClientFactory = driftClientFactory();
         Scribe scribe = driftClientFactory.createDriftClient(Scribe.class).get();
-        Account account = scribe.save(new Account(1, "good"));
+        Account account = scribe.findById(1);
         System.out.println(account.getName());
     }
 

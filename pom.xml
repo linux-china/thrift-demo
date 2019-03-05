@@ -12,7 +12,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <thrift.version>0.12.0</thrift.version>
-        <nifty.version>0.23.0</nifty.version>
         <drift.version>1.18</drift.version>
         <spring-boot.version>2.1.3.RELEASE</spring-boot.version>
     </properties>

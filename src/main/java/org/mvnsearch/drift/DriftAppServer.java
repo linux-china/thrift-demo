@@ -23,7 +23,7 @@ public class DriftAppServer {
                 new DriftNettyServerTransportFactory(config), //netty transport
                 new ThriftCodecManager(),  //thrift codec
                 new NullMethodInvocationStatsFactory(),
-                ImmutableSet.of(new DriftService(new ScribeImpl())),  //services
+                ImmutableSet.of(new DriftService(new AccountServiceImpl())),  //services
                 ImmutableSet.of());
 
         // start the server (it should be shutdown when no longer needed)

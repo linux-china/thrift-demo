@@ -18,8 +18,8 @@ import io.airlift.drift.transport.netty.client.DriftNettyMethodInvokerFactory;
 public class DriftAppClient {
     public static void main(String[] args) {
         DriftClientFactory driftClientFactory = driftClientFactory();
-        Scribe scribe = driftClientFactory.createDriftClient(Scribe.class).get();
-        Account account = scribe.findById(1);
+        AccountService accountService = driftClientFactory.createDriftClient(AccountService.class).get();
+        Account account = accountService.findById(1);
         System.out.println(account.getName());
     }
 

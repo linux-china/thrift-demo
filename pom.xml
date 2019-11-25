@@ -11,9 +11,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <thrift.version>0.12.0</thrift.version>
+        <thrift.version>0.13.0</thrift.version>
         <drift.version>1.18</drift.version>
-        <spring-boot.version>2.1.3.RELEASE</spring-boot.version>
+        <spring-boot.version>2.2.1.RELEASE</spring-boot.version>
     </properties>
 
     <dependencies>
@@ -65,7 +65,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
+                <version>3.8.1</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
@@ -77,7 +77,7 @@
                 <artifactId>maven-thrift-plugin</artifactId>
                 <version>0.1.11</version>
                 <configuration>
-                    <thriftExecutable>/usr/local/Cellar/thrift/0.12.0/bin/thrift</thriftExecutable>
+                    <thriftExecutable>/usr/local/opt/thrift/bin/thrift</thriftExecutable>
                     <generator>java</generator>
                 </configuration>
                 <executions>

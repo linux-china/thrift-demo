@@ -15,7 +15,7 @@ import uic.UserService;
 public class ThriftServer {
     public static void main(String[] args) throws Exception {
         TNonblockingServerSocket socket = new TNonblockingServerSocket(9090);
-        final UserService.Processor processor = new UserService.Processor(new UserServiceImpl());
+        final UserService.Processor<UserService.Iface> processor = new UserService.Processor<>(new UserServiceImpl());
         TThreadedSelectorServer.Args arg = new TThreadedSelectorServer.Args(socket);
         arg.protocolFactory(new TCompactProtocol.Factory());
         arg.transportFactory(new TFramedTransport.Factory());

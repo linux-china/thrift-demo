@@ -11,9 +11,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <thrift.version>0.13.0</thrift.version>
+        <thrift.version>0.14.1</thrift.version>
         <drift.version>1.18</drift.version>
-        <spring-boot.version>2.4.2</spring-boot.version>
+        <spring-boot.version>2.4.3</spring-boot.version>
     </properties>
 
     <dependencies>
@@ -82,7 +82,7 @@
             <dependency>
                 <groupId>org.junit</groupId>
                 <artifactId>junit-bom</artifactId>
-                <version>5.6.2</version>
+                <version>5.7.1</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>

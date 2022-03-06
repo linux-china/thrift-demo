@@ -1,6 +1,8 @@
 package org.mvnsearch;
 
+import net.datafaker.Faker;
 import org.apache.thrift.TException;
+import uic.User;
 import uic.UserService;
 
 /**
@@ -10,12 +12,12 @@ import uic.UserService;
  */
 public class UserServiceImpl implements UserService.Iface {
     @Override
-    public String getName() throws TException {
-        return "你好，这里是Java世界";
-    }
-
-    @Override
-    public String getNick(int id) throws TException {
-        return "雷锋：" + id;
+    public User getUser(int id) throws TException {
+        Faker faker = new Faker();
+        User user = new User();
+        user.setId(id);
+        user.setFirstName(faker.name().firstName());
+        user.setLastName(faker.name().lastName());
+        return user;
     }
 }

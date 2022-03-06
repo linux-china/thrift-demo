@@ -18,7 +18,7 @@ public class ThriftClient {
         transport.open();
         TProtocol protocol = new TCompactProtocol(transport);
         UserService.Client client = new UserService.Client(protocol);
-        System.out.println(client.getNick(1));
+        System.out.println(client.getUser(1));
         transport.close();
     }
 }

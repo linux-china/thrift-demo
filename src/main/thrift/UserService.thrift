@@ -1,7 +1,12 @@
 namespace java uic
 
-service UserService {
-   string getName(),
+struct User {
+    1: i32 id,
+    2: string firstName
+    3: string lastName
+    4: i32 age
+}
 
-   string getNick(1:i32 id)
+service UserService {
+   User getUser(1:i32 id)
 }

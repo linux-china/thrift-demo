@@ -1,6 +1,6 @@
 package org.mvnsearch;
 
-import org.apache.thrift.protocol.TCompactProtocol;
+import org.apache.thrift.protocol.TJSONProtocol;
 import org.apache.thrift.protocol.TProtocol;
 import org.apache.thrift.transport.TSocket;
 import org.apache.thrift.transport.TTransport;
@@ -14,9 +14,9 @@ import uic.UserService;
  */
 public class ThriftClient {
     public static void main(String[] args) throws Exception {
-        TTransport transport = new TFramedTransport(new TSocket("localhost", 9090));
+        TTransport transport = new TFramedTransport(new TSocket("localhost", 9091));
         transport.open();
-        TProtocol protocol = new TCompactProtocol(transport);
+        TProtocol protocol = new TJSONProtocol(transport);
         UserService.Client client = new UserService.Client(protocol);
         System.out.println(client.getUser(1));
         transport.close();

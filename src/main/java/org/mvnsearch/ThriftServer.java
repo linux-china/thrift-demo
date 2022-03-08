@@ -1,7 +1,6 @@
 package org.mvnsearch;
 
 import org.apache.thrift.TProcessorFactory;
-import org.apache.thrift.protocol.TCompactProtocol;
 import org.apache.thrift.protocol.TJSONProtocol;
 import org.apache.thrift.server.TThreadedSelectorServer;
 import org.apache.thrift.transport.TNonblockingServerSocket;
@@ -18,13 +17,13 @@ public class ThriftServer {
         TNonblockingServerSocket socket = new TNonblockingServerSocket(9090);
         final UserService.Processor<UserService.Iface> processor = new UserService.Processor<>(new UserServiceImpl());
         TThreadedSelectorServer.Args arg = new TThreadedSelectorServer.Args(socket);
-        arg.protocolFactory(new TCompactProtocol.Factory());
+        arg.protocolFactory(new TJSONProtocol.Factory());
         arg.transportFactory(new TFramedTransport.Factory());
         arg.processorFactory(new TProcessorFactory(processor));
         arg.selectorThreads(4);
         arg.workerThreads(100);
         TThreadedSelectorServer server = new TThreadedSelectorServer(arg);
-        System.out.println("#服务启动-使用:非阻塞&高效二进制编码");
+        System.out.println("Server started: None blocking and TJSONProtocol");
         server.serve();
 
     }

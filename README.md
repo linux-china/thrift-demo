@@ -10,3 +10,4 @@ Apache Thrift Demo
 * Drift: annotation-based Java library for creating Thrift serializable types and services. https://github.com/airlift/drift
 * Set of cool annotations that helps you building Thrift applications with Spring Boot: https://github.com/aatarasoff/spring-thrift-starter
 * Spring boot starter for Facebook's Nifty: https://github.com/bigdullrock/nifty-spring-boot-starter
+* Thrift Specs: https://github.com/apache/thrift/tree/master/doc/specs

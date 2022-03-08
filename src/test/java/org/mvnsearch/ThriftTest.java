@@ -2,7 +2,7 @@ package org.mvnsearch;
 
 
 import org.apache.thrift.TSerializer;
-import org.apache.thrift.protocol.TSimpleJSONProtocol;
+import org.apache.thrift.protocol.TJSONProtocol;
 import org.junit.jupiter.api.Test;
 import uic.User;
 
@@ -18,7 +18,7 @@ public class ThriftTest {
         user.setFirstName("jacky");
         user.setLastName("chan");
         user.setAge(40);
-        TSerializer serializer = new TSerializer(new TSimpleJSONProtocol.Factory());
+        TSerializer serializer = new TSerializer(new TJSONProtocol.Factory());
         String json = serializer.toString(user);
         System.out.println(json);
     }

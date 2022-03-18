@@ -8,7 +8,7 @@ struct User {
     5: Contact contact
     6: binary avatar
     7: bool vip
-    8: string alias
+    8: set<string> aliases
 }
 
 struct Contact {

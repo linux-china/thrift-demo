@@ -14,7 +14,7 @@ import uic.UserService;
  */
 public class ThriftClient {
     public static void main(String[] args) throws Exception {
-        TTransport transport = new TFramedTransport(new TSocket("localhost", 9091));
+        TTransport transport = new TFramedTransport(new TSocket("localhost", 9090));
         transport.open();
         TProtocol protocol = new TJSONProtocol(transport);
         UserService.Client client = new UserService.Client(protocol);

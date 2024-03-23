@@ -14,9 +14,9 @@
     <java.version>1.8</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
-    <thrift.version>0.18.1</thrift.version>
+    <thrift.version>0.19.0</thrift.version>
     <drift.version>1.18</drift.version>
-    <spring-boot.version>2.7.10</spring-boot.version>
+    <spring-boot.version>2.7.18</spring-boot.version>
   </properties>
 
   <dependencies>
@@ -27,7 +27,7 @@
     <dependency>
       <groupId>net.datafaker</groupId>
       <artifactId>datafaker</artifactId>
-      <version>1.8.1</version>
+      <version>2.1.0</version>
     </dependency>
     <dependency>
       <groupId>org.apache.thrift</groupId>
@@ -37,7 +37,7 @@
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>31.1-jre</version>
+      <version>33.1.0-jre</version>
     </dependency>
     <!-- drift-->
     <dependency>
@@ -82,7 +82,7 @@
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
-      <version>3.24.2</version>
+      <version>3.25.3</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -99,7 +99,7 @@
       <dependency>
         <groupId>org.junit</groupId>
         <artifactId>junit-bom</artifactId>
-        <version>5.9.2</version>
+        <version>5.10.2</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
@@ -110,7 +110,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.10.1</version>
+        <version>3.12.1</version>
         <configuration>
           <compilerArgument>-parameters</compilerArgument>
         </configuration>

@@ -11,11 +11,11 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <java.version>1.8</java.version>
+    <java.version>17</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <thrift.version>0.19.0</thrift.version>
-    <drift.version>1.18</drift.version>
+    <drift.version>1.21</drift.version>
     <spring-boot.version>2.7.18</spring-boot.version>
   </properties>
 
